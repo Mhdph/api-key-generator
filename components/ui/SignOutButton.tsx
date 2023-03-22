@@ -1,18 +1,18 @@
-'use clinet';
+"use client";
 
-import React from 'react';
-import {signIn} from 'next-auth/react';
-import Button from './Button';
+import {signIn} from "next-auth/react";
+import {FC, useState} from "react";
+import Button from "./Button";
 
-type SignInButtonProps = {};
+interface SignOutButtonProps {}
 
-const SignInButton: React.FC<SignInButtonProps> = () => {
-  const [isLoading, setIsLoading] = React.useState<boolean>(false);
+const SignOutButton: FC<SignOutButtonProps> = ({}) => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const signInWithGoogle = async () => {
     try {
       setIsLoading(true);
-      await signIn('google');
+      await signIn("google");
     } catch (error) {
       // toast({
       //   title: 'Error signing in',
@@ -28,4 +28,5 @@ const SignInButton: React.FC<SignInButtonProps> = () => {
     </Button>
   );
 };
-export default SignInButton;
+
+export default SignOutButton;
