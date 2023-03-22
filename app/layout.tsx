@@ -4,6 +4,7 @@ import {Inter} from 'next/font/google';
 
 import Providers from '@/components/Providers';
 import {cn} from '@/lib/utils';
+import {Toaster} from '@/components/ui/Toast';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -14,7 +15,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         <Providers>
           {/* @ts-expect-error Server Component */}
           <Navbar />
-
+          <Toaster position='bottom-right' />
           <main>{children}</main>
         </Providers>
 

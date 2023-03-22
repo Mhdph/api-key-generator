@@ -3,6 +3,7 @@
 import {signIn} from 'next-auth/react';
 import {FC, useState} from 'react';
 import Button from './Button';
+import {toast} from './Toast';
 
 /**
  * NextJS does not allow to pass function from server -> client components,
@@ -18,7 +19,13 @@ const SignInButton: FC<SignInButtonProps> = ({}) => {
     try {
       setIsLoading(true);
       await signIn('google');
-    } catch (error) {}
+    } catch (error) {
+      toast({
+        title: 'Error signing in',
+        message: 'Please try again later.',
+        type: 'error',
+      });
+    }
   };
 
   return (
