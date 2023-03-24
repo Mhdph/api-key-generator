@@ -36,6 +36,7 @@ specifiers:
   tailwindcss: ^3.2.7
   tailwindcss-animate: ^1.0.5
   typescript: 4.9.5
+  zod: ^3.21.4
 
 dependencies:
   '@emotion/react': 11.10.6_pmekkgnqduwlme35zpnqhenc34
@@ -66,6 +67,7 @@ dependencies:
   simplebar-react: 3.2.2_react@18.2.0
   tailwind-merge: 1.10.0
   typescript: 4.9.5
+  zod: 3.21.4
 
 devDependencies:
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
@@ -3801,4 +3803,8 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  /zod/3.21.4:
+    resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
     dev: false
